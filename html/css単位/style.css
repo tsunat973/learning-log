@@ -1,0 +1,68 @@
+html {
+    font-size: 10px;
+
+
+}
+
+#percentages #ems section {
+    background-color: blue;
+    width: 800px;
+    height: 800px;
+}
+
+#percentages #ems div {
+    background-color: #fec5bb;
+    width: 50%;
+    height: 50%;
+}
+
+#ems h1 {
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 200%;
+}
+
+#ems h2 {
+    font-size: 5em;
+    margin-left: 1em;
+}
+
+#ems h3 {
+    font-size: 1.5em;
+}
+
+#ems {
+    font-size: 30px;
+}
+
+#ems p {
+    font-size: 0.8em;
+}
+
+#ems button {
+    font-size: 1em;
+    padding: 0 1em;
+    border-radius: 0.5em;
+    background-color: aqua;
+    color: white;
+}
+
+#ems ul {
+    font-size: 0.8em;
+}
+
+#rems h2 {
+    font-size: 3rem;
+}
+
+#rems h3 {
+    font-size: 2rem;
+}
+
+#rems ul {
+    font-size: 2rem;
+}
+
+#rems button {
+    font-size: 1.5rem;
+}

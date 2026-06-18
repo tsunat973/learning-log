@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>テスト</title>
+</head>
+<body>
+
+<h1></h1>
+
+<script>
+  const WORKOUT_STORAGE_KEY = 'ichikaWorkoutLogEntries';
+
+// --- 読み込む側の処理（ページが開かれた時に自動で動く部分）---
+document.addEventListener('DOMContentLoaded', () => {
+  // localStorageからデータを取り出してみる
+  const savedJson = localStorage.getItem(WORKOUT_STORAGE_KEY);
+
+  if (savedJson) {
+    // データがあった場合
+    console.log('わーい！保存されてたデータが見つかったよ！');
+    // JSON文字列をオブジェクトに戻して、見やすく表示
+    console.log(JSON.parse(savedJson));
+  } else {
+    // データがなかった場合
+    console.log('保管ボックスは空っぽでした。');
+  }
+});
+
+// --- 保存する側の処理（あとでコンソールから手動で呼び出して試すよ）---
+function saveSampleData() {
+  const sampleData = [
+    { id: 1, type: 'ランニング', time: 30 },
+    { id: 2, type: '筋トレ', time: 45 }
+  ];
+
+  // オブジェクトをJSON文字列に変換して保存！
+  localStorage.setItem(WORKOUT_STORAGE_KEY, JSON.stringify(sampleData));
+  console.log('サンプルデータを保存しました！ページをリフレッシュして確認してみてね。');
+}
+
+// --- データをリセットするための関数（お掃除用）---
+function clearSavedData() {
+  localStorage.removeItem(WORKOUT_STORAGE_KEY);
+  console.log('データをリセットしました。ページをリフレッシュしてください。');
+}
+</script>
+
+</body>
+</html>
