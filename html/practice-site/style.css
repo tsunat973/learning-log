@@ -1,0 +1,139 @@
+/* ===== リセット ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== ① Header / Nav ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* TODO: display を flex にして、
+     logoとnavを左右に分ける justify-content を書く */
+
+  padding: 16px 24px;
+  background-color: #222;
+  color: white;
+}
+
+.nav-list {
+  /* TODO: list-style を消す
+     display: flex にして横並びにする
+     li同士の間隔は gap で */
+     list-style: none;
+     display: flex;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ===== ② Hero ===== */
+.hero {
+  /* TODO: height を 70vh くらいにする
+     position: relative にする
+     display: flex + flex-direction: column にして
+     justify-content, align-items で中央寄せする */
+
+  background-color: #444;
+  color: white;
+  text-align: center;
+}
+
+/* ===== ③ About ===== */
+.about {
+  padding: 60px 24px;
+  /* TODO: max-width をつけて margin: 0 auto で中央寄せしてみる */
+}
+
+/* ===== ④ Skills ===== */
+.skills {
+  padding: 60px 24px;
+  background-color: #f5f5f5;
+}
+
+.skills-grid {
+  /* TODO: display: grid にする
+     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+     gap をつける */
+}
+
+.skill-card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  /* TODO: box-shadow をつけてカードっぽくする */
+}
+
+/* ===== ⑤ Works ===== */
+.works {
+  padding: 60px 24px;
+}
+
+.works-list {
+  /* TODO: display: flex にして flex-wrap: wrap
+     gap をつける */
+}
+
+.work-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 280px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.work-card:hover {
+  /* TODO: transform: scale(1.05) などでホバー時に拡大してみる */
+}
+
+/* ===== ⑥ Contact ===== */
+.contact {
+  padding: 60px 24px;
+  background-color: #f5f5f5;
+}
+
+.contact form {
+  /* TODO: display: flex + flex-direction: column
+     gap をつけて、max-width をつけて中央寄せする */
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ===== ⑦ Footer ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  /* TODO: nav-list を縦並びにする
+     works-list を縦並びにする
+     など、768px以下のときの調整をここに書く */
+}

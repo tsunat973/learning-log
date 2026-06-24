@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>練習サイト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ① Header / Nav -->
+  <header class="header">
+    <div class="logo">MySite</div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ② Hero -->
+  <section class="hero">
+    <h1>Hello, I'm ___</h1>
+    <p>ここに自己紹介の一言を入れる</p>
+  </section>
+
+  <!-- ③ About -->
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>TODO: 自己紹介の文章を書く</p>
+  </section>
+
+  <!-- ④ Skills -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML</div>
+      <div class="skill-card">CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">MongoDB</div>
+    </div>
+  </section>
+
+  <!-- ⑤ Works -->
+  <section id="works" class="works">
+    <h2>Works</h2>
+    <div class="works-list">
+      <div class="work-card">
+        <h3>プロジェクト1</h3>
+        <p>説明文</p>
+      </div>
+      <div class="work-card">
+        <h3>プロジェクト2</h3>
+        <p>説明文</p>
+      </div>
+      <div class="work-card">
+        <h3>プロジェクト3</h3>
+        <p>説明文</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+
+      <button type="submit">送信</button>
+    </form>
+  </section>
+
+  <!-- ⑦ Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 MySite</p>
+  </footer>
+
+</body>
+</html>
