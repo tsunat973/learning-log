@@ -26,8 +26,8 @@ body {
   /* TODO: list-style を消す
      display: flex にして横並びにする
      li同士の間隔は gap で */
-     list-style: none;
-     display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .nav-list a {
@@ -41,7 +41,12 @@ body {
      position: relative にする
      display: flex + flex-direction: column にして
      justify-content, align-items で中央寄せする */
-
+  height: 70vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #444;
   color: white;
   text-align: center;
@@ -51,6 +56,8 @@ body {
 .about {
   padding: 60px 24px;
   /* TODO: max-width をつけて margin: 0 auto で中央寄せしてみる */
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* ===== ④ Skills ===== */
@@ -63,6 +70,15 @@ body {
   /* TODO: display: grid にする
      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
      gap をつける */
+  /*
+  repeat(auto-fit, minmax(120px, 1fr)) が一番複雑なので分解すると：
+  minmax(120px, 1fr) → 1列の幅は「最小120px、最大は1fr（残りスペースを均等分配）」
+  auto-fit → 列の本数を自動で決める。画面が狭ければ列数を減らし、広ければ増やす
+  repeat(...) → 上記のルールを、入る分だけ繰り返す
+  */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
 }
 
 .skill-card {
@@ -70,7 +86,10 @@ body {
   padding: 20px;
   text-align: center;
   border-radius: 8px;
-  /* TODO: box-shadow をつけてカードっぽくする */
+  /* TODO: box-shadow をつけてカードっぽくする 
+  box-shadowは要素に影をつけるプロパティです。今回の.skill-cardに追加して、カードっぽい立体感を出すのに使います。
+基本構文  cssbox-shadow: [横方向のズレ] [縦方向のズレ] [ぼかしの強さ] [広がり(省略可)] [色];*/
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== ⑤ Works ===== */
@@ -80,7 +99,13 @@ body {
 
 .works-list {
   /* TODO: display: flex にして flex-wrap: wrap
-     gap をつける */
+     gap をつける
+     display: flex → 子要素(work-card)を横並びに
+     flex-wrap: wrap → 横幅が足りなくなったら自動で次の行に折り返す
+    gap: 50px → カード同士の間隔 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .work-card {
@@ -105,6 +130,14 @@ body {
 .contact form {
   /* TODO: display: flex + flex-direction: column
      gap をつけて、max-width をつけて中央寄せする */
+  /*
+  .contact form は子孫セレクタで、「.contactクラスがついた要素の中にあるformタグ全部」を指します。
+  */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact input,
@@ -136,4 +169,17 @@ body {
   /* TODO: nav-list を縦並びにする
      works-list を縦並びにする
      など、768px以下のときの調整をここに書く */
+  .header {
+    flex-direction: column; /* logoとnavを縦並びに */
+    align-items: center; /* 縦並びになったとき、横方向で中央に揃える */
+    gap: 16px; /* logoとnav-listの間に余白 */
+  }
+  .nav-list {
+    list-style: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .works-list {
+    flex-direction: column;
+  }
 }
